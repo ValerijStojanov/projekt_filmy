@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>title</title>
+</head>
+<body>
+
+
+    <main class="container">
+        <h1> Seznam hercu </h1>
+
+
+        <ul>
+
+            {% for slug in data_herci %}
+            <li>
+                {% comment %} NEFUNGUJE MI TO UDĚLAT PŘES {% url .... %} {% endcomment %}
+                <a href="/filmy/detail-hercu/{{ slug }}" > {{ slug }} </a> 
+            </li>
+            {% endfor %}
+
+        </ul>
+
+        
+    </main>
+
+
+</body>
+</html>

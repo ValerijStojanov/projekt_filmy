@@ -1,0 +1,35 @@
+
+<!DOCTYPE html> {% load static %}
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href= "{% static 'filmy/style_detail.css' %}">
+    <title>title</title>
+</head>
+<body>
+
+<main class="container">
+
+    <nav>
+        <ul>
+            <li>
+                <a  href="{% url 'filmy:seznam' %}"> Seznam filmu </a>
+            </li>
+        </ul>
+    </nav>
+
+    
+    {% include 'filmy/search_form.html' %} {% comment %} projetky\FilmyProjekt_\filmy\templates\filmy\search_form.html {% endcomment %}
+
+    <h1> {{ film.nazev }} </h1>
+
+    <p class="parag"> {{ film.popis }} </p>
+
+    <img src= "https://picsum.photos/500/500"> 
+
+</main>
+
+</body>
+</html>
